@@ -1,0 +1,208 @@
+@import 'variables';
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    .setWH;
+    overflow: hidden;
+}
+
+body {
+    font-size: 14px;
+}
+
+#car {
+    .setWH;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    >div {
+        .setWH;
+        background-color: @whiteColor;
+    }
+}
+
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.clear {
+    zoom: 1;
+    &:after {
+        content: '';
+        display: block;
+        visibility: visible;
+        height: 0;
+        clear: both;
+    }
+}
+
+
+
+/*页面跳转效果start*/
+.vux-pop-in-enter-active,
+.vux-pop-in-leave-active,
+.vux-pop-out-enter-active,
+.vux-pop-out-leave-active,
+.vux-slide-up-enter-active,
+.vux-slide-up-leave-active,
+.vux-slide-down-enter-active,
+.vux-slide-down-leave-active {
+    position: absolute;
+    top: 0;
+    .transition(all, .5s, ease, 0s);
+}
+.vux-pop-out-enter,
+.vux-pop-in-leave-active {
+    .translateX(-100%);
+}
+.vux-pop-in-enter,
+.vux-pop-out-leave-active {
+    .translateX;
+}
+.vux-slide-down-enter,
+.vux-slide-up-leave-active {
+    opacity: 0;
+    .translateY(-100%);
+}
+.vux-slide-up-enter,
+.vux-slide-down-leave-active {
+    opacity: 0;
+    .translateY;
+}
+/*页面跳转效果end*/
+
+
+/*顶部样式start*/
+#car{
+    .vux-header {
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        background-color: @darkColor;
+        .vux-header-title {
+            font-size: 16px;
+        }
+        .vux-header-left{
+            .left-arrow{
+                &:before {
+                    border-top-color: @whiteColor;
+                    border-left-color: @whiteColor;
+                    border-width: 2px 0 0 2px;
+                }
+            }
+        }
+        .vux-header-right a {
+            font-size: 12px;
+            color: @whiteColor;
+        }
+    }
+}
+/*顶部样式end*/
+
+
+/*底部菜单样式start*/
+#car {
+    .weui-tabbar__item{
+        &.weui-bar__item_on{
+            .weui-tabbar__icon>i, .weui-tabbar__label{
+                color: @darkColor;
+            }
+        }    
+    }
+}
+/*底部菜单样式end*/
+
+
+/*搜索框样式start*/
+#car {
+    .main-search {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        background-color: @darkColor;
+        &.transparent, .vux-search-fixed, .weui-search-bar, .weui-search-bar__form {
+            background-color: @transColor;
+        }
+        .weui-search-bar{
+            &:before, &:after {
+                border: none;
+            }
+        }
+        >.vux-search-box.vux-search-fixed {
+            width: 100%;
+        }
+        .weui-search-bar__form{
+            .weui-search-bar__input {
+                height: 1.5em;
+                line-height: 1.5em;
+            }
+            .weui-search-bar__label {
+                top: 3px;
+                left: 5px;
+                text-align: left;
+            }
+        }
+        .weui-search-bar__cancel-btn {
+            color: @whiteColor;
+        }
+    }
+}
+/*搜索框样式end*/
+
+#car ._v-container {
+    position: relative;
+    ._v-content>.loading-layer {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        .spinner-holder .spinner {
+            .setWH(26px, 26px);
+            margin-top: 5px;
+        }
+    }
+}
+
+.vux-toast .weui-toast__content {
+    padding: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#car .vux-check-icon>.weui-icon-success:before,
+.v-transfer-dom .vux-popup-header-right,
+.dp-container .dp-header .dp-item.dp-right {
+    color: @blackColor;
+}
+
+.vux-confirm {
+    .weui-dialog__ft {
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .weui-dialog__btn_primary {
+        color: #E64340;
+    }
+}

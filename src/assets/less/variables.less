@@ -1,0 +1,48 @@
+@whiteColor: #fff;
+@darkWhite: #f0f0f0;
+@lightGrey: #eaeaea;
+@lightGreys: #ccc;
+@darkGrey: #acacac;
+@darkColor: #444;
+@blackColor: #000;
+@redColor: #E64340;
+@transColor: transparent;
+
+.setWH(@w: 100%, @h: 100%) {
+    width: @w;
+    height: @h;
+}
+
+.overflow(@flow) when (@flow = auto) {
+    overflow: auto; 
+    -webkit-overflow-scrolling: touch;
+}
+.overflow(@flow) when (@flow = hidden) {
+    overflow: hidden; 
+}
+
+.boxShadow(@x: 0px, @y: 0px, @blur: 0px, @color: #848484) {
+    -webkit-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.transition(@tprop: all, @tdur: .3s, @fn: ease-in, @tlay: 0s) {
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    -ms-transition: @arguments;
+    transition: @arguments;
+}
+
+.translateX(@X: 100%) {
+    -webkit-transform: translateX(@X);
+    -moz-transform: translateX(@X);
+    -ms-transform: translateX(@X);
+    transform: translateX(@X);
+}
+
+.translateY(@Y: 100%) {
+    -webkit-transform: translateY(@Y);
+    -moz-transform: translateY(@Y);
+    -ms-transform: translateY(@Y);
+    transform: translateY(@Y);
+}
